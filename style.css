@@ -1,0 +1,36 @@
+:root{
+  --brown:#6f514b; --blue:#5472f5; --white:#fff;
+  --brown-soft:rgba(111,81,75,.85);
+  --font:"Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:var(--font);color:var(--brown);background:var(--white);line-height:1.65;font-size:17px}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 40px}
+
+header.site{display:flex;justify-content:space-between;align-items:center;padding:32px 0}
+.brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:1.7rem;letter-spacing:-.02em;color:var(--brown);text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:22%;display:block}
+nav a{margin-left:48px;color:var(--brown);text-decoration:none;font-weight:400;font-size:1.05rem}
+nav a:hover{color:var(--blue)}
+
+main.home{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 24px 80px}
+.hero h1{font-size:clamp(3.2rem,11vw,8rem);line-height:1;letter-spacing:-.045em;margin:0 0 36px;font-weight:700}
+.hero h1 span{display:block;color:var(--blue)}
+.hero p.lead{font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.4;color:var(--brown-soft);max-width:22em;margin:0 auto 44px}
+.store img{height:64px;width:auto;display:block;margin:0 auto}
+
+footer.site{padding:24px 0 36px;color:var(--brown-soft);font-size:.9rem;text-align:center}
+
+.doc{max-width:680px;margin:24px auto 80px;padding:0 24px}
+.doc h1{font-size:2.2rem;letter-spacing:-.025em;margin-top:24px}
+.doc h2{font-size:1.2rem;margin-top:36px}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  header.site{padding:20px 0;flex-wrap:wrap;gap:12px}
+  .brand{font-size:1.35rem}
+  .brand img{width:36px;height:36px}
+  nav a{margin-left:0;margin-right:20px;font-size:.95rem}
+}
